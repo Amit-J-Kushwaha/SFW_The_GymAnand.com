@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFW The Gym</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body class="background">
+
+
+    <head>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contactus.html">Contact Us</a>
+          <a href="services.html">Services</a>
+        </div>
+        
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        </head>
+
+
+        <div class="image-container" id="gymContainer">
+
+          
+                <center>
+                    <h1>We Are Awareded</h1>
+                    <h4>SFW The Gym is one of the fastest growing GYM in State.</h4>
+                </center>
+           
+            <div class="image-container" id="awardsContainer">
+                <div class="image-wrapper" id="awardsFrame">
+                  <img src="https://9ratycflbdta.cdn.shift8web.com/wp-content/uploads/2021/01/SFW-THE-GYM_Awards-3.jpg" alt="Awards Image 1" class="active">
+                  <img src="https://9ratycflbdta.cdn.shift8web.com/wp-content/uploads/2021/01/SFW-THE-GYM_Awards-5.jpg" alt="cardio">
+                    <img src="https://9ratycflbdta.cdn.shift8web.com/wp-content/uploads/2021/01/SFW-THE-GYM_Awards-2-scaled.jpg" alt="workout">
+                    <img src="https://9ratycflbdta.cdn.shift8web.com/wp-content/uploads/2021/01/SFW-THE-GYM_Awards-7-scaled.jpg" alt="waigth lifting">
+                
+                </div>
+              </div>
+
+
+
+              <h2>
+                Gallery By SFW The Gym
+              </h2> 
+            <div class="image-wrapper" id="gymFrame">
+              <img src="https://d3nn873nee648n.cloudfront.net/900x600/17218/120-SM755085.jpg" alt="Gym Image 1" class="active">
+              <img src="https://d3nn873nee648n.cloudfront.net/900x600/20816/300-SM1085344.jpg" alt="Gym Image 2">
+              <img src="https://d3nn873nee648n.cloudfront.net/900x600/19624/1-SM948847.jpg" alt="Gym Image 3">
+              <img src="https://d3nn873nee648n.cloudfront.net/900x600/8624/20-SM219869.jpg" alt="waigth lifting">
+              <img src="https://d3nn873nee648n.cloudfront.net/900x600/16202/1-SM684059.jpg" alt="Image zumba">
+              <img src="https://d3nn873nee648n.cloudfront.net/900x600/17707/220-SM784154.jpg" alt="waigth lifting">
+              <!-- Add more gym images as needed -->
+            </div>
+          </div>
+          
+          
+
+        </div>
+
+
+        <div class="call">
+            <a href="tel:+918200873390" class="call-button">&#x260E Call Now</a> <br><br>
+        
+           
+        
+          </div>
+
+          <center>
+            <button class="call-button" style="background-color:rgb(216, 185, 9)"> <a href="#">back To Top</a></button>
+         </center>
+
+
+
+        <section class="footer">
+  
+            <div class="TopTitle" id="#">
+                
+                
+                <img src="https://i.postimg.cc/7Lh4Ydnm/sfwgym-processed.png" alt="">
+    
+              
+            </div>
+
+           
+    
+    
+    
+            <div class="contact">
+              SFW and Team: <br>
+              <a href="tel:+919328425765">&#x260E Call Now : 9328425765</a> <br>
+          
+              &#xe567: Near Bhaikaka Circle, Vallabh Vidhyanagar, Anand <br>
+              &#x260E whatsapp Us : 9328425765 <br>
+              
+              Gym Time: <br>
+              Monday To Saturday : 5:00 AM To 12:00 PM and 3:00 PM To 10:00 PM <br>
+              Sunday : 5:00 AM To 10:00 AM
+              <br> <br><br>
+          
+            <center>
+              <h2>SFW GYMS</h2> <br>
+              Anand | Ahemdabad | Baroda | Palm | mehsana | vastrapur | Manjalpur | gota | Nadiad | Paldi | Vadodara | Navrangpura |
+              Hirawadi | Chiloda | Savli | Maninagar
+            </center>
+              
+          
+            </div>
+          </section>
+
+
+
+
+
+
+    
+        <script type="text/javascript">
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+    
+    
+    
+            const gymImages = document.querySelectorAll('#gymFrame img');
+      let gymIndex = 0;
+    
+      const awardsImages = document.querySelectorAll('#awardsFrame img');
+      let awardsIndex = 0;
+    
+      function showGymImage(index) {
+        gymImages.forEach((image, i) => {
+          if (i === index) {
+            image.style.opacity = 1;
+          } else {
+            image.style.opacity = 0;
+          }
+        });
+      }
+    
+      function showAwardsImage(index) {
+        awardsImages.forEach((image, i) => {
+          if (i === index) {
+            image.style.opacity = 1;
+          } else {
+            image.style.opacity = 0;
+          }
+        });
+      }
+    
+      function nextGymImage() {
+        gymIndex = (gymIndex + 1) % gymImages.length;
+        showGymImage(gymIndex);
+      }
+    
+      function nextAwardsImage() {
+        awardsIndex = (awardsIndex + 1) % awardsImages.length;
+        showAwardsImage(awardsIndex);
+      }
+    
+      setInterval(nextGymImage, 2000); // Change gym image every 2 seconds (2000 milliseconds)
+      setInterval(nextAwardsImage, 2000); // Change awards image every 2 seconds (2000 milliseconds)
+    
+          
+          
+            </script>
+</body>
+</html>
